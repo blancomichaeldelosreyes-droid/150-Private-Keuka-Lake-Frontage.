@@ -1,0 +1,658 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="New lakefront cottage on Keuka Lake with 150 feet of private lake frontage, a new dock, and room for six guests."><title>Keuka Lake Cottage | Private Lakefront Getaway</title><style>
+:root{--ink:#18333b;--muted:#60757b;--cream:#f7f3eb;--line:#dfe6e3;--accent:#2d6f78;--shadow:0 18px 50px rgba(20,45,52,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}
+.nav{position:fixed;z-index:20;top:0;left:0;right:0;padding:18px 5vw;display:flex;justify-content:space-between;align-items:center;color:#fff;background:linear-gradient(180deg,rgba(0,0,0,.5),transparent);transition:.3s}.nav.scrolled{background:rgba(255,255,255,.96);color:var(--ink);box-shadow:0 5px 25px #0001}.brand,h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}.brand{font-size:1.2rem}.navlinks{display:flex;gap:26px;font-size:.92rem}
+.hero{min-height:92vh;position:relative;display:grid;place-items:center;overflow:hidden;background:#123}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,24,28,.65),rgba(5,24,28,.15)),url("images/hero.jpg") center/cover no-repeat}.hero-content{position:relative;color:#fff;width:min(1100px,90%);padding:150px 0 90px}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;font-weight:700}h1{font-size:clamp(3rem,7vw,6.8rem);max-width:900px;margin:18px 0;line-height:1.05}.hero p{font-size:1.15rem;max-width:650px;margin:0 0 28px}.btn{display:inline-flex;padding:13px 22px;border-radius:999px;border:1px solid transparent;font-weight:700;cursor:pointer;transition:.2s}.btn.primary{background:#fff;color:var(--ink)}.btn.dark{background:var(--ink);color:#fff}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px #0002}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;max-width:980px;margin:-48px auto 0;position:relative;z-index:3;border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.stat{padding:26px;text-align:center;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;font-family:Georgia,serif;font-size:1.7rem;font-weight:400}.stat span{color:var(--muted);font-size:.88rem}
+section{padding:100px 6vw}.section-head{max-width:750px;margin:0 auto 45px;text-align:center}.section-head .eyebrow{color:var(--accent)}h2{font-size:clamp(2.3rem,5vw,4.2rem);margin:12px 0 18px;line-height:1.05}.section-head p,.copy p{color:var(--muted)}.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;max-width:1200px;margin:auto}.split img{width:100%;height:560px;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}.cream{background:var(--cream)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:auto}.feature{background:#fff;border:1px solid var(--line);padding:30px;border-radius:18px}.feature .icon{font-size:1.6rem}.feature h3{margin:8px 0 6px;font-family:inherit;font-weight:700;font-size:1.05rem}.feature p{margin:0;color:var(--muted);font-size:.92rem}
+.gallery{max-width:1300px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery-card{border:0;padding:0;cursor:pointer;background:#ddd;border-radius:12px;overflow:hidden;aspect-ratio:1/1.05}.gallery-card:first-child{grid-column:span 2;grid-row:span 2}.gallery-card img{width:100%;height:100%;object-fit:cover;display:block;transition:.5s}.gallery-card:hover img{transform:scale(1.05)}
+.experience{background:var(--ink);color:#fff}.experience .section-head p{color:#c7d3d5}.activities{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1100px;margin:auto}.activity{padding:25px;border:1px solid #fff2;border-radius:16px;background:#ffffff0a}.activity h3{margin:0 0 7px;font-size:1.3rem}.activity p{margin:0;color:#c7d3d5;font-size:.9rem}
+.booking{background:#edf4f2}.booking-box{max-width:900px;margin:auto;background:#fff;padding:45px;border-radius:24px;box-shadow:var(--shadow)}form{display:grid;grid-template-columns:1fr 1fr;gap:16px}label{font-size:.82rem;font-weight:700}input,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;margin-top:6px;color:var(--ink)}textarea{min-height:120px;resize:vertical}.full{grid-column:1/-1}.form-note{color:var(--muted);font-size:.84rem;margin-top:12px}
+footer{background:#10272c;color:#d9e4e5;padding:55px 6vw}.footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:30px}footer h3{font-size:1.6rem;margin:0 0 8px;color:#fff}footer p{margin:0;color:#aebfc2}
+.lightbox{position:fixed;inset:0;background:#050f0ff5;z-index:50;display:none;align-items:center;justify-content:center;padding:25px}.lightbox.open{display:flex}.lightbox img{max-width:92vw;max-height:88vh;object-fit:contain;border-radius:8px}.close,.prev,.next{position:absolute;border:0;background:#fff2;color:#fff;width:45px;height:45px;border-radius:50%;cursor:pointer;font-size:1.5rem}.close{top:20px;right:20px}.prev{left:20px}.next{right:20px}
+
+.details{background:#fff}
+.detail-grid{max-width:1150px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.detail-panel{border:1px solid var(--line);border-radius:20px;padding:30px;background:#fff}
+.detail-icon{font-size:1.7rem;margin-bottom:8px}.detail-panel h3{font-size:1.55rem;margin:0 0 16px}
+.amenity-list,.rule-card ul{list-style:none;padding:0;margin:0}.amenity-list li{padding:10px 0;border-bottom:1px solid var(--line)}.amenity-list li:last-child{border:0}
+.room-row{display:flex;flex-direction:column;padding:12px 0;border-bottom:1px solid var(--line)}.room-row span{color:var(--muted);font-size:.9rem}.bath-title{margin:20px 0 0}
+.space-tags{display:flex;flex-wrap:wrap;gap:9px}.space-tags span{background:var(--cream);padding:8px 12px;border-radius:999px;font-size:.88rem}
+.about-property .split{align-items:start}.quote-card{background:var(--ink);color:#fff;border-radius:24px;padding:45px;min-height:360px;display:flex;flex-direction:column;justify-content:center}.quote-card span{font:6rem Georgia;line-height:.5;color:#b8d4d0}.quote-card p{font:2rem Georgia;line-height:1.25;margin:15px 0}.quote-card small{color:#c7d3d5}
+.host{background:#fff}.host-card{max-width:950px;margin:auto;display:grid;grid-template-columns:130px 1fr;gap:35px;align-items:start;border:1px solid var(--line);padding:40px;border-radius:24px;box-shadow:var(--shadow)}.host-avatar{width:100px;height:100px;border-radius:50%;display:grid;place-items:center;background:var(--cream);font:1.8rem Georgia;color:var(--accent)}.host-card p{color:var(--muted)}
+.reason-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:20px}.reason-grid article{background:#fff;padding:35px;border-radius:20px}.reason-grid h3{font-size:1.8rem;margin-top:0}.reason-grid p{color:var(--muted)}
+.location{background:#fff}.location-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:25px}.map-card{border:1px solid var(--line);border-radius:22px;overflow:hidden}.map-art{height:330px;position:relative;background:linear-gradient(135deg,#dbe8df,#e9dfc9 45%,#cbdeda 46%,#dce9e3);display:grid;place-items:center}.map-art:before{content:"";position:absolute;width:65%;height:180%;background:#8db7b3;transform:rotate(28deg);border-radius:50%;opacity:.7}.map-pin,.map-label{position:relative;z-index:1}.map-pin{font-size:2.4rem}.map-label{margin-top:8px;background:#fff;padding:9px 16px;border-radius:12px;box-shadow:0 8px 25px #0002;font-weight:700;text-align:center}.map-label small{color:var(--muted);font-weight:400}.map-note{padding:18px 22px;color:var(--muted);margin:0}.nearby-list{display:flex;flex-direction:column;gap:10px}.nearby-list div{display:flex;justify-content:space-between;gap:20px;padding:22px;background:var(--cream);border-radius:14px}.nearby-list span{color:var(--muted);white-space:nowrap}
+.rules{background:#f5f7f6}.rules-grid{max-width:1150px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:18px}.rule-card{background:#fff;border:1px solid var(--line);padding:28px;border-radius:18px}.rule-card h3{font-size:1.5rem;margin-top:0}.rule-card li{padding:7px 0;color:var(--muted)}.rule-card p{color:var(--muted)}
+@media(max-width:800px){.detail-grid,.reason-grid,.rules-grid,.location-grid{grid-template-columns:1fr}.host-card{grid-template-columns:1fr;text-align:center}.host-avatar{margin:auto}.quote-card{min-height:280px}.nearby-list div{flex-direction:column;gap:3px}}
+
+@media(max-width:800px){.navlinks{display:none}.stats{width:90%;grid-template-columns:1fr;margin-top:-30px}.stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}section{padding:75px 5vw}.split{grid-template-columns:1fr;gap:35px}.split img{height:420px}.features{grid-template-columns:1fr}.activities{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:repeat(2,1fr)}form{grid-template-columns:1fr}.full{grid-column:auto}.footer-inner{flex-direction:column}}@media(max-width:480px){h1{font-size:3.1rem}.activities{grid-template-columns:1fr}.booking-box{padding:25px}}
+
+/* --- Night mode + mobile navigation --- */
+body{background:#fff;transition:background .25s,color .25s}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.theme-toggle,.menu-toggle{border:1px solid #ffffff55;background:#ffffff18;color:inherit;width:42px;height:42px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.menu-toggle{display:none;border-radius:12px;font-size:1.15rem}
+body.dark-mode{--ink:#e7f0f1;--muted:#a9bcc0;--cream:#18272b;--line:#33484d;--accent:#77b7bd;--shadow:0 18px 50px rgba(0,0,0,.35);background:#101b1e;color:var(--ink)}
+body.dark-mode .nav.scrolled{background:rgba(16,27,30,.96);color:var(--ink)}
+body.dark-mode .stats,body.dark-mode .feature,body.dark-mode .detail-panel,body.dark-mode .host,body.dark-mode .reason-grid article,body.dark-mode .rule-card,body.dark-mode .booking-box{background:#17272b;color:var(--ink)}
+body.dark-mode .booking{background:#142327}
+body.dark-mode .location,body.dark-mode .details{background:#101b1e}
+body.dark-mode .rules{background:#132125}
+body.dark-mode input,body.dark-mode textarea,body.dark-mode select{background:#122125;color:var(--ink);border-color:var(--line)}
+body.dark-mode .space-tags span,body.dark-mode .nearby-list div{background:#203237}
+body.dark-mode .map-label{background:#17272b;color:var(--ink)}
+body.dark-mode .btn.dark{background:#e7f0f1;color:#10272c}
+
+/* --- Booking system --- */
+.booking-shell{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:28px;align-items:start}
+.calendar-panel,.summary-panel{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff}
+body.dark-mode .calendar-panel,body.dark-mode .summary-panel{background:#17272b}
+.calendar-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.calendar-header h3{margin:0;font-size:1.55rem}
+.calendar-nav{display:flex;gap:8px}
+.calendar-nav button{width:40px;height:40px;border:1px solid var(--line);background:transparent;color:inherit;border-radius:10px;cursor:pointer}
+.calendar-nav button:hover{background:var(--cream)}
+.weekdays,.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.weekdays div{text-align:center;font-size:.72rem;font-weight:800;color:var(--muted);padding:5px 0}
+.day{min-height:48px;border:1px solid transparent;border-radius:10px;background:transparent;color:inherit;cursor:pointer;font-weight:650}
+.day:hover:not(:disabled){border-color:var(--accent)}
+.day.today{box-shadow:inset 0 0 0 2px var(--accent)}
+.day.muted{opacity:.28}
+.day.unavailable{background:#e6e9e8;color:#8a9799;text-decoration:line-through;cursor:not-allowed;opacity:.65}
+body.dark-mode .day.unavailable{background:#263438;color:#687a7e}
+.day.selected{background:var(--accent);color:#fff;border-color:var(--accent)}
+.day.in-range{background:color-mix(in srgb,var(--accent) 16%,transparent);border-radius:0}
+.day.range-start{border-radius:10px 0 0 10px}
+.day.range-end{border-radius:0 10px 10px 0}
+.calendar-legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;color:var(--muted);font-size:.78rem}
+.legend-item{display:flex;align-items:center;gap:6px}
+.legend-dot{width:12px;height:12px;border-radius:4px;border:1px solid var(--line)}
+.legend-dot.available{background:transparent}.legend-dot.selected{background:var(--accent);border-color:var(--accent)}
+.legend-dot.blocked{background:#d9dfdd}
+.booking-hint{margin:14px 0 0;color:var(--muted);font-size:.86rem}
+.summary-panel h3{font-size:1.55rem;margin:0 0 18px}
+.summary-list{display:grid;gap:0;margin:0 0 18px}
+.summary-row{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid var(--line)}
+.summary-row span:first-child{color:var(--muted)}
+.summary-total{font-size:1.2rem;font-weight:800}
+.guest-control{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:8px 10px;margin:8px 0 18px}
+.guest-control button{width:34px;height:34px;border:0;border-radius:9px;background:var(--cream);color:inherit;cursor:pointer;font-size:1.2rem}
+.guest-control output{font-weight:800;min-width:35px;text-align:center}
+.booking-form-wrap{margin-top:28px;padding-top:28px;border-top:1px solid var(--line)}
+.booking-form-wrap form{grid-template-columns:1fr 1fr}
+.booking-form-wrap select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;margin-top:6px;color:var(--ink);background:#fff}
+.booking-error{display:none;padding:12px 14px;border-radius:10px;background:#fff0ee;color:#8d3e35;border:1px solid #f0c8c2;font-size:.85rem}
+.booking-error.show{display:block}
+.confirmation{display:none;text-align:center;padding:20px 10px}
+.confirmation.show{display:block}
+.confirmation-icon{font-size:2.5rem}
+.confirmation h3{font-size:2rem;margin:10px 0}
+.confirmation p{color:var(--muted)}
+.booking-note{margin-top:16px;padding:12px 14px;background:var(--cream);border-radius:10px;color:var(--muted);font-size:.82rem}
+
+/* --- Responsive polish --- */
+@media(max-width:800px){
+  .menu-toggle{display:grid}
+  .navlinks{position:absolute;top:74px;left:5vw;right:5vw;display:none;flex-direction:column;gap:0;padding:10px;background:rgba(255,255,255,.97);color:var(--ink);border-radius:16px;box-shadow:var(--shadow)}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:12px 14px}
+  body.dark-mode .navlinks{background:rgba(23,39,43,.98);color:var(--ink)}
+  .booking-shell{grid-template-columns:1fr}
+  .calendar-panel,.summary-panel{padding:18px}
+  .day{min-height:44px}
+  .booking-form-wrap form{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .calendar-header h3{font-size:1.25rem}
+  .weekdays,.calendar-grid{gap:3px}
+  .day{min-height:42px;font-size:.82rem}
+  .calendar-legend{gap:8px}
+}
+</style></head><body>
+<nav class="nav" id="nav"><a class="brand" href="#">Keuka Lake Cottage</a><div class="navlinks"><a href="#cottage">Cottage</a><a href="#details">Amenities</a><a href="#gallery">Photos</a><a href="#location">Area</a><a href="#booking">Book</a></div><div class="nav-actions"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle night mode">☾</button><button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button></div></nav>
+<header class="hero"><div class="hero-content"><div class="eyebrow">Keuka Lake · Finger Lakes · New York</div><h1>New Lakefront Cottage</h1><p>150 feet of private Keuka Lake frontage, a new dock, and a peaceful place to slow down and enjoy the lake.</p><a class="btn primary" href="#booking">Ask About Your Stay</a></div></header>
+<div class="stats"><div class="stat"><strong>150'</strong><span>Private lake frontage</span></div><div class="stat"><strong>6</strong><span>Guests</span></div><div class="stat"><strong>Private</strong><span>New dock</span></div></div>
+<section id="cottage"><div class="split"><img src="images/front view 1.jpg" alt="Keuka Lake cottage"><div class="copy"><div class="eyebrow">A place by the water</div><h2>Wake up where the lake begins.</h2><p>Welcome to a special lakefront cottage on Keuka Lake. This home is designed for guests who want time together, fresh air, beautiful water views, and the simple pleasure of being right on the lake.</p><p>With <strong>150 feet of private Keuka Lake frontage</strong>, a <strong>new dock</strong>, and accommodations for <strong>up to six guests</strong>, the cottage is an inviting base for a relaxed Finger Lakes getaway.</p><a class="btn dark" href="#gallery">Explore the photos</a></div></div></section>
+<section class="cream"><div class="section-head"><div class="eyebrow">Made for a getaway</div><h2>Everything starts at the shoreline.</h2><p>A few of the things that make this cottage special.</p></div><div class="features">
+<article class="feature"><div class="icon">🌊</div><h3>Private Lakefront</h3><p>Enjoy 150 feet of private Keuka Lake frontage right outside the cottage.</p></article><article class="feature"><div class="icon">⚓</div><h3>New Dock</h3><p>A new dock makes it easy to spend more time on the water.</p></article><article class="feature"><div class="icon">🏡</div><h3>Sleeps 6</h3><p>A comfortable setting for families and small groups looking for a lake escape.</p></article><article class="feature"><div class="icon">☀️</div><h3>Outdoor Living</h3><p>Enjoy the lake breeze, changing light, and peaceful surroundings.</p></article><article class="feature"><div class="icon">📍</div><h3>Finger Lakes</h3><p>Explore the scenery, towns, wineries, food, and outdoor recreation of the region.</p></article><article class="feature"><div class="icon">❤️</div><h3>Family-Owned</h3><p>A personal vacation home offered with the warmth of a family-hosted stay.</p></article></div></section>
+
+<section class="details" id="details">
+  <div class="section-head">
+    <div class="eyebrow">The Cottage</div>
+    <h2>Comfort, privacy & lakefront living.</h2>
+    <p>Everything you need for a relaxing stay on Keuka Lake.</p>
+  </div>
+
+  <div class="detail-grid">
+    <article class="detail-panel">
+      <div class="detail-icon">✨</div>
+      <h3>Popular amenities</h3>
+      <ul class="amenity-list">
+        <li>🚗 Onsite parking available</li>
+        <li>🍳 Kitchen</li>
+        <li>🧺 Washer</li>
+        <li>❄️ Air conditioning</li>
+        <li>🔥 Barbecue grill</li>
+        <li>🌿 Deck or patio</li>
+      </ul>
+    </article>
+
+    <article class="detail-panel">
+      <div class="detail-icon">🛏️</div>
+      <h3>Rooms & beds</h3>
+      <p><strong>3 bedrooms · sleeps 6</strong></p>
+      <div class="room-row"><strong>Guest Bedroom</strong><span>1 Queen Bed</span></div>
+      <div class="room-row"><strong>Guest Bedroom</strong><span>1 Queen Bed</span></div>
+      <div class="room-row"><strong>Master Bedroom</strong><span>1 King Bed</span></div>
+      <p class="bath-title"><strong>2 bathrooms</strong></p>
+      <div class="room-row"><strong>1st Floor Bathroom</strong><span>Towels · Bathtub/shower · Toilet</span></div>
+      <div class="room-row"><strong>2nd Floor Bathroom</strong><span>Towels · Shower · Toilet</span></div>
+    </article>
+
+    <article class="detail-panel">
+      <div class="detail-icon">🏡</div>
+      <h3>Spaces</h3>
+      <div class="space-tags">
+        <span>Deck or patio</span><span>Porch or lanai</span><span>Kitchen</span>
+        <span>Outdoor play area</span><span>Garden</span><span>Dining area</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="about-property cream">
+  <div class="split">
+    <div class="copy">
+      <div class="eyebrow">About this property</div>
+      <h2>New lakefront cottage. Your own piece of Keuka Lake.</h2>
+      <p>Experience the beauty of Keuka Lake from this newly constructed lakefront cottage, thoughtfully designed to combine modern comfort with the timeless charm of the Finger Lakes.</p>
+      <p>Situated on an exceptionally private property with <strong>over 150 feet of pristine shoreline</strong>, you'll enjoy peaceful surroundings, stunning lake views, and room to relax without the crowds. Wake each morning to the gentle sounds of the water, spend your days swimming, boating, or fishing, and end each evening watching unforgettable sunsets over the lake.</p>
+      <p>The cottage comfortably accommodates up to six guests with <strong>3 bedrooms and 2 full bathrooms</strong>. Everything is new, offering a fresh, clean, and comfortable space for your vacation.</p>
+      <p>Bring your boat and take advantage of the <strong>brand-new permanent dock</strong>, providing easy access to one of the Finger Lakes' most beautiful destinations. Whether you're planning a family vacation, a couples' getaway, or a relaxing week with friends, you'll find the perfect balance of comfort, privacy, and lakefront living.</p>
+      <p>Conveniently located on the west side near Keuka Lake's renowned wineries, breweries, restaurants, hiking trails, and charming lakeside towns, this is the ideal home base for creating lasting Finger Lakes memories.</p>
+    </div>
+    <div class="quote-card">
+      <span>“</span>
+      <p>Peaceful surroundings, beautiful lake views, and the freedom to slow down.</p>
+      <small>— Your Keuka Lake getaway</small>
+    </div>
+  </div>
+</section>
+
+<section class="host">
+  <div class="section-head">
+    <div class="eyebrow">Meet your host</div>
+    <h2>Hosted by Terrence Sick</h2>
+  </div>
+  <div class="host-card">
+    <div class="host-avatar">TS</div>
+    <div>
+      <p>We're local owners who take great pride in sharing our corner of Keuka Lake with guests. After rebuilding this cottage from the ground up, our goal was to create a clean, comfortable, and relaxing lakefront retreat where families and friends can make lasting memories.</p>
+      <p>We enjoy boating, spending time on the lake, and exploring the Finger Lakes, and we're always happy to share recommendations for wineries, breweries, restaurants, hiking trails, and other local attractions. We strive to provide a five-star experience by keeping the property exceptionally clean, well-maintained, and equipped with everything you need for a memorable stay.</p>
+      <p>We hope you'll enjoy this special place as much as we do and create memories that bring you back to Keuka Lake year after year.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reasons cream">
+  <div class="section-head">
+    <div class="eyebrow">Why this property</div>
+    <h2>What makes it special.</h2>
+  </div>
+  <div class="reason-grid">
+    <article><h3>Why they chose this property</h3><p>Keuka Lake is one of the most beautiful and unique lakes in New York's Finger Lakes region, known for its crystal-clear water, scenic vineyards, and welcoming small-town charm. This cottage is in a peaceful area where guests can enjoy the quiet beauty of the lake while still being a short drive from wineries, breweries, restaurants, hiking trails, and local shops.</p><p>What we enjoy most is the privacy and tranquility of the location. Whether you're taking a morning walk along the shoreline, spending the day on the water, or relaxing on the private dock as the sun sets, the pace of life here encourages you to slow down and enjoy every moment.</p></article>
+    <article><h3>What makes this property unique</h3><p>What makes this property truly special is its rare combination of <strong>new construction, exceptional privacy, and approximately 150 feet of private Keuka Lake frontage</strong>. The cottage features its own private waterfront and private dock, so you'll have your own space to swim, fish, boat, or simply relax by the water.</p><p>Unlike many lake rentals that are closely spaced, this cottage sits on a spacious waterfront lot, creating a peaceful setting where you can truly unwind. Everything in the cottage is brand new, offering a fresh, clean, and thoughtfully designed retreat with all the comforts of home.</p></article>
+  </div>
+</section>
+
+<section class="location" id="location">
+  <div class="section-head">
+    <div class="eyebrow">Explore the area</div>
+    <h2>Hammondsport, New York</h2>
+    <p>Lake days, Finger Lakes adventures, wineries, parks, and charming nearby towns.</p>
+  </div>
+  <div class="location-grid">
+    <div class="map-card">
+      <div class="map-art">
+        <div class="map-pin">📍</div>
+        <div class="map-label">Keuka Lake<br><small>Hammondsport, NY</small></div>
+      </div>
+      <p class="map-note">View the property location and plan your Finger Lakes adventures.</p>
+    </div>
+    <div class="nearby-list">
+      <div><strong>Keuka Lake</strong><span>1 min walk</span></div>
+      <div><strong>Canandaigua Lake</strong><span>41 min drive</span></div>
+      <div><strong>Watkins Glen State Park</strong><span>57 min drive</span></div>
+      <div><strong>Elmira - Corning Regional Airport (ELM)</strong><span>67 min drive</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="rules">
+  <div class="section-head">
+    <div class="eyebrow">Good to know</div>
+    <h2>House rules & important information.</h2>
+  </div>
+  <div class="rules-grid">
+    <article class="rule-card">
+      <h3>House Rules</h3>
+      <ul>
+        <li><strong>Check in:</strong> After 4:00 PM</li>
+        <li><strong>Check out:</strong> Before 11:00 AM</li>
+        <li><strong>Children:</strong> Allowed, ages 0–17</li>
+        <li><strong>Events:</strong> No events allowed</li>
+        <li><strong>Pets:</strong> No pets allowed</li>
+        <li><strong>Smoking:</strong> Smoking is not permitted</li>
+      </ul>
+    </article>
+    <article class="rule-card">
+      <h3>Damage & incidentals</h3>
+      <p>Guests are responsible for any damage to the rental property caused by them or their party during their stay.</p>
+    </article>
+    <article class="rule-card">
+      <h3>Safety & property information</h3>
+      <ul>
+        <li>Property #2023936</li>
+        <li>Host has indicated there is a smoke detector.</li>
+        <li>Safety features include a fire extinguisher and deadbolt lock.</li>
+        <li>Host has not indicated whether a carbon monoxide detector is on the property.</li>
+        <li>Outdoor spaces such as balconies, patios, and terraces may not be suitable for every child; contact the host with accessibility or safety concerns.</li>
+      </ul>
+    </article>
+    <article class="rule-card">
+      <h3>Check-in notes</h3>
+      <ul>
+        <li>Extra-person charges may apply depending on property policy.</li>
+        <li>Government-issued photo identification and a payment method or cash deposit may be required at check-in for incidental charges.</li>
+        <li>Special requests are subject to availability and may incur additional charges; they cannot be guaranteed.</li>
+        <li>Onsite parties or group events are strictly prohibited.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="gallery"><div class="section-head"><div class="eyebrow">The cottage & lake</div><h2>See the place for yourself.</h2><p>Browse the photos and imagine your next few days on Keuka Lake.</p></div><div class="gallery"><button class="gallery-card" data-index="0" aria-label="Open photo"><img src="images/front view 1.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="1" aria-label="Open photo"><img src="images/front view 2.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="2" aria-label="Open photo"><img src="images/front view 3.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="3" aria-label="Open photo"><img src="images/front view 4.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="4" aria-label="Open photo"><img src="images/Dock.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="5" aria-label="Open photo"><img src="images/far view.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="6" aria-label="Open photo"><img src="images/fron view 5.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="7" aria-label="Open photo"><img src="images/763671440_29094786466776729_5431233586019553470_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="8" aria-label="Open photo"><img src="images/763722503_29094804050108304_4392284982054481277_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="9" aria-label="Open photo"><img src="images/763907317_29094798870108822_6993686602926756956_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="10" aria-label="Open photo"><img src="images/763944134_29094801613441881_1232739905430730824_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="11" aria-label="Open photo"><img src="images/763944136_29094801060108603_886787598561368696_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="12" aria-label="Open photo"><img src="images/763944146_29094810710107638_3555559572834386693_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="13" aria-label="Open photo"><img src="images/764102931_29094792470109462_8954045063496467162_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="14" aria-label="Open photo"><img src="images/764340107_29094794393442603_8851330477139318685_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="15" aria-label="Open photo"><img src="images/764625258_29094779160110793_3507898623682387994_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="16" aria-label="Open photo"><img src="images/764807063_29094777403444302_4016838013655552930_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="17" aria-label="Open photo"><img src="images/764807082_29094811670107542_3161840797038795551_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="18" aria-label="Open photo"><img src="images/764817654_29094801880108521_4466693076100601705_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="19" aria-label="Open photo"><img src="images/764832727_29094795346775841_7882071148317737064_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="20" aria-label="Open photo"><img src="images/764844786_29094777576777618_4988556582424999568_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="21" aria-label="Open photo"><img src="images/764862911_29094775690111140_397900790795363055_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="22" aria-label="Open photo"><img src="images/764881126_29094810140107695_6261347900866108233_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="23" aria-label="Open photo"><img src="images/764924895_29094811053440937_9139068310751069986_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="24" aria-label="Open photo"><img src="images/764953465_29094789710109738_3782721323286316208_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="25" aria-label="Open photo"><img src="images/765059694_29094805300108179_1370869191348234712_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="26" aria-label="Open photo"><img src="images/765175710_29094788443443198_6253020359259126969_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="27" aria-label="Open photo"><img src="images/765175712_29094802810108428_6033674426211021038_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="28" aria-label="Open photo"><img src="images/765637522_29094781420110567_765692702838810215_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="29" aria-label="Open photo"><img src="images/765637523_29094792143442828_4873727827825337997_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="30" aria-label="Open photo"><img src="images/765652618_29094806473441395_3484462047617980191_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="31" aria-label="Open photo"><img src="images/765731903_29094785236776852_952979138057586697_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="32" aria-label="Open photo"><img src="images/765731908_29094812270107482_5319610441479389494_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="33" aria-label="Open photo"><img src="images/765769671_29094774693444573_4508426999566838032_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="34" aria-label="Open photo"><img src="images/765796408_29094783110110398_377694990200908387_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="35" aria-label="Open photo"><img src="images/765796414_29094778200110889_7146701826825464038_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="36" aria-label="Open photo"><img src="images/765871845_29094806923441350_2424843128050809282_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="37" aria-label="Open photo"><img src="images/765871860_29094774580111251_1405748056344859412_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="38" aria-label="Open photo"><img src="images/765871865_29094791390109570_6125713797377253621_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="39" aria-label="Open photo"><img src="images/765929057_29094807890107920_4050637261615795526_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="40" aria-label="Open photo"><img src="images/765997549_29094797390108970_3942329108918263307_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="41" aria-label="Open photo"><img src="images/765997551_29094785590110150_4839101677763137710_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="42" aria-label="Open photo"><img src="images/765997552_29094795126775863_810202978932102059_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="43" aria-label="Open photo"><img src="images/766221512_29094798376775538_128057794086363837_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="44" aria-label="Open photo"><img src="images/766241277_29094786223443420_4437110980947988456_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="45" aria-label="Open photo"><img src="images/766662112_29094805530108156_5979211660973454528_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="46" aria-label="Open photo"><img src="images/766674313_29094779123444130_3120664868592077872_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="47" aria-label="Open photo"><img src="images/766674322_29094811816774194_318142107472275814_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="48" aria-label="Open photo"><img src="images/766710581_29094782123443830_1443419586728651819_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="49" aria-label="Open photo"><img src="images/766723890_29094797000109009_8300043879517605576_n (1).jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="50" aria-label="Open photo"><img src="images/766723890_29094797000109009_8300043879517605576_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="51" aria-label="Open photo"><img src="images/766736751_29094788873443155_8383348368095674636_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="52" aria-label="Open photo"><img src="images/766797105_29094811330107576_2811584188460117970_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="53" aria-label="Open photo"><img src="images/766797119_29094794403442602_6973812092419681163_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="54" aria-label="Open photo"><img src="images/766861796_29094784393443603_2499525311579902088_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="55" aria-label="Open photo"><img src="images/766861796_29094800003442042_3650392615832526316_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="56" aria-label="Open photo"><img src="images/766889569_29094780196777356_4318281702966009968_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="57" aria-label="Open photo"><img src="images/767001534_29094800036775372_2032105831958212387_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="58" aria-label="Open photo"><img src="images/767001535_29094812366774139_8800312944818333869_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="59" aria-label="Open photo"><img src="images/767001539_29094780146777361_3076622762496320829_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="60" aria-label="Open photo"><img src="images/767161435_29094795830109126_5183584554484902729_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="61" aria-label="Open photo"><img src="images/767190227_29094797590108950_6198950087891670214_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="62" aria-label="Open photo"><img src="images/767268745_29094801020108607_7378657212102029910_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="63" aria-label="Open photo"><img src="images/767268747_29094785770110132_6401055741312077681_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="64" aria-label="Open photo"><img src="images/767268757_29094807260107983_5434414603225958721_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="65" aria-label="Open photo"><img src="images/767540337_29094802293441813_7170638997878097101_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="66" aria-label="Open photo"><img src="images/767560465_29094813166774059_2105229571905756859_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="67" aria-label="Open photo"><img src="images/767585842_29094775573444485_89701162141618051_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="68" aria-label="Open photo"><img src="images/767597371_29094803190108390_8979015083604336949_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="69" aria-label="Open photo"><img src="images/768136639_29094790846776291_7876141439285567982_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="70" aria-label="Open photo"><img src="images/768136652_29094791123442930_8076442244138824158_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="71" aria-label="Open photo"><img src="images/768172792_29094778386777537_8823404192800642967_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="72" aria-label="Open photo"><img src="images/768230278_29094793220109387_936731070855623548_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="73" aria-label="Open photo"><img src="images/768309979_29094810053441037_2765051383609908879_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="74" aria-label="Open photo"><img src="images/768309985_29094806390108070_2529296993969199660_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="75" aria-label="Open photo"><img src="images/768347640_29094799026775473_7001138853270652955_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="76" aria-label="Open photo"><img src="images/768408577_29094781306777245_701707337294329006_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="77" aria-label="Open photo"><img src="images/769168393_29094786790110030_452110492813266561_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="78" aria-label="Open photo"><img src="images/769309216_29094803883441654_3103561463847116755_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="79" aria-label="Open photo"><img src="images/769385814_29094773493444693_5474464063388404179_n.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button>
+<button class="gallery-card" data-index="80" aria-label="Open photo"><img src="images/plant.jpg" alt="Keuka Lake cottage photo" loading="lazy"></button></div></section>
+<section class="experience" id="experience"><div class="section-head"><div class="eyebrow">Keuka Lake</div><h2>Days that don't need a schedule.</h2><p>Spend your time on the water, around the lake, or simply enjoying the cottage.</p></div><div class="activities"><article class="activity"><h3>On the Water</h3><p>Swimming, boating, fishing, paddling, and relaxing by the lake.</p></article><article class="activity"><h3>Slow Mornings</h3><p>Coffee, lake views, fresh air, and nowhere you have to rush.</p></article><article class="activity"><h3>Explore</h3><p>Discover Finger Lakes towns, local food, wineries, and scenic drives.</p></article><article class="activity"><h3>Evenings</h3><p>Come back to the cottage and enjoy the quiet after a day outdoors.</p></article></div></section>
+<section class="booking" id="booking">
+  <div class="booking-box">
+    <div class="section-head">
+      <div class="eyebrow">Plan your stay</div>
+      <h2>Book Your Stay</h2>
+      <p>Choose your dates below to check the cottage's configured availability and see an estimated stay price.</p>
+    </div>
+
+    <div class="booking-shell">
+      <div class="calendar-panel">
+        <div class="calendar-header">
+          <h3 id="calendarTitle">Month Year</h3>
+          <div class="calendar-nav">
+            <button type="button" id="prevMonth" aria-label="Previous month">‹</button>
+            <button type="button" id="nextMonth" aria-label="Next month">›</button>
+          </div>
+        </div>
+        <div class="weekdays" aria-hidden="true">
+          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+        </div>
+        <div class="calendar-grid" id="calendarGrid" aria-label="Availability calendar"></div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-dot available"></span>Available</span>
+          <span class="legend-item"><span class="legend-dot selected"></span>Selected</span>
+          <span class="legend-item"><span class="legend-dot blocked"></span>Unavailable</span>
+        </div>
+        <p class="booking-hint" id="calendarHint">Select your check-in date.</p>
+      </div>
+
+      <aside class="summary-panel">
+        <h3>Your Stay</h3>
+        <div class="summary-list">
+          <div class="summary-row"><span>Check-in</span><strong id="summaryCheckIn">—</strong></div>
+          <div class="summary-row"><span>Check-out</span><strong id="summaryCheckOut">—</strong></div>
+          <div class="summary-row"><span>Guests</span><strong id="summaryGuests">2</strong></div>
+          <div class="summary-row"><span>Nights</span><strong id="summaryNights">—</strong></div>
+          <div class="summary-row"><span>Nightly rate</span><strong id="summaryRate">$0</strong></div>
+          <div class="summary-row summary-total"><span>Estimated total</span><strong id="summaryTotal">$0</strong></div>
+        </div>
+        <div>
+          <label for="guestCount">Number of guests</label>
+          <div class="guest-control">
+            <button type="button" id="guestMinus" aria-label="Decrease guests">−</button>
+            <output id="guestOutput" for="guestCount">2</output>
+            <button type="button" id="guestPlus" aria-label="Increase guests">+</button>
+          </div>
+        </div>
+        <div class="booking-note">Your request is not a confirmed reservation until the host reviews and confirms it.</div>
+      </aside>
+    </div>
+
+    <div class="booking-form-wrap" id="bookingFormWrap">
+      <form id="bookingForm" onsubmit="submitBookingRequest(event)">
+        <div><label for="name">Guest name</label><input id="name" required autocomplete="name" placeholder="Jane Smith"></div>
+        <div><label for="email">Email</label><input id="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+        <div><label for="phone">Phone number</label><input id="phone" type="tel" autocomplete="tel" placeholder="+1 555 123 4567"></div>
+        <div><label for="formGuests">Number of guests</label><select id="formGuests" required><option value="1">1 guest</option><option value="2" selected>2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option></select></div>
+        <div><label for="formCheckIn">Check-in</label><input id="formCheckIn" type="date" required readonly></div>
+        <div><label for="formCheckOut">Check-out</label><input id="formCheckOut" type="date" required readonly></div>
+        <div class="full"><label for="message">Message / special requests</label><textarea id="message" placeholder="Tell the host anything you'd like them to know."></textarea></div>
+        <div class="full"><div class="booking-error" id="bookingError" role="alert"></div></div>
+        <div class="full"><button class="btn dark" type="submit">Send Booking Request</button><div class="form-note">This opens your email app with a prepared request. No payment is taken and no automatic reservation is created.</div></div>
+      </form>
+    </div>
+
+    <div class="confirmation" id="confirmation">
+      <div class="confirmation-icon">✓</div>
+      <h3>Request Ready to Send</h3>
+      <p>Your booking request for <strong id="confirmDates">—</strong> for <strong id="confirmGuests">—</strong> has been prepared for the host.</p>
+      <p>Please complete the email that opens on your device. Your stay is <strong>pending host confirmation</strong>.</p>
+      <button class="btn dark" type="button" onclick="resetBooking()">Make Another Request</button>
+    </div>
+  </div>
+</section>
+<footer><div class="footer-inner"><div><h3>Keuka Lake Cottage</h3><p>150' private lake frontage · New dock · Sleeps 6</p></div><div><p>Family-owned lakefront vacation rental</p><p>© <span id="year"></span> Keuka Lake Cottage</p></div></div></footer>
+<div class="lightbox" id="lightbox"><button class="close" onclick="closeLightbox()">×</button><button class="prev" onclick="changePhoto(-1)">‹</button><img id="lightboxImg" alt="Gallery image"><button class="next" onclick="changePhoto(1)">›</button></div>
+<script>
+const gallery=["images/front view 1.jpg","images/front view 2.jpg","images/front view 3.jpg","images/front view 4.jpg","images/Dock.jpg","images/far view.jpg","images/fron view 5.jpg","images/763671440_29094786466776729_5431233586019553470_n.jpg","images/763722503_29094804050108304_4392284982054481277_n.jpg","images/763907317_29094798870108822_6993686602926756956_n.jpg","images/763944134_29094801613441881_1232739905430730824_n.jpg","images/763944136_29094801060108603_886787598561368696_n.jpg","images/763944146_29094810710107638_3555559572834386693_n.jpg","images/764102931_29094792470109462_8954045063496467162_n.jpg","images/764340107_29094794393442603_8851330477139318685_n.jpg","images/764625258_29094779160110793_3507898623682387994_n.jpg","images/764807063_29094777403444302_4016838013655552930_n.jpg","images/764807082_29094811670107542_3161840797038795551_n.jpg","images/764817654_29094801880108521_4466693076100601705_n.jpg","images/764832727_29094795346775841_7882071148317737064_n.jpg","images/764844786_29094777576777618_4988556582424999568_n.jpg","images/764862911_29094775690111140_397900790795363055_n.jpg","images/764881126_29094810140107695_6261347900866108233_n.jpg","images/764924895_29094811053440937_9139068310751069986_n.jpg","images/764953465_29094789710109738_3782721323286316208_n.jpg","images/765059694_29094805300108179_1370869191348234712_n.jpg","images/765175710_29094788443443198_6253020359259126969_n.jpg","images/765175712_29094802810108428_6033674426211021038_n.jpg","images/765637522_29094781420110567_765692702838810215_n.jpg","images/765637523_29094792143442828_4873727827825337997_n.jpg","images/765652618_29094806473441395_3484462047617980191_n.jpg","images/765731903_29094785236776852_952979138057586697_n.jpg","images/765731908_29094812270107482_5319610441479389494_n.jpg","images/765769671_29094774693444573_4508426999566838032_n.jpg","images/765796408_29094783110110398_377694990200908387_n.jpg","images/765796414_29094778200110889_7146701826825464038_n.jpg","images/765871845_29094806923441350_2424843128050809282_n.jpg","images/765871860_29094774580111251_1405748056344859412_n.jpg","images/765871865_29094791390109570_6125713797377253621_n.jpg","images/765929057_29094807890107920_4050637261615795526_n.jpg","images/765997549_29094797390108970_3942329108918263307_n.jpg","images/765997551_29094785590110150_4839101677763137710_n.jpg","images/765997552_29094795126775863_810202978932102059_n.jpg","images/766221512_29094798376775538_128057794086363837_n.jpg","images/766241277_29094786223443420_4437110980947988456_n.jpg","images/766662112_29094805530108156_5979211660973454528_n.jpg","images/766674313_29094779123444130_3120664868592077872_n.jpg","images/766674322_29094811816774194_318142107472275814_n.jpg","images/766710581_29094782123443830_1443419586728651819_n.jpg","images/766723890_29094797000109009_8300043879517605576_n (1).jpg","images/766723890_29094797000109009_8300043879517605576_n.jpg","images/766736751_29094788873443155_8383348368095674636_n.jpg","images/766797105_29094811330107576_2811584188460117970_n.jpg","images/766797119_29094794403442602_6973812092419681163_n.jpg","images/766861796_29094784393443603_2499525311579902088_n.jpg","images/766861796_29094800003442042_3650392615832526316_n.jpg","images/766889569_29094780196777356_4318281702966009968_n.jpg","images/767001534_29094800036775372_2032105831958212387_n.jpg","images/767001535_29094812366774139_8800312944818333869_n.jpg","images/767001539_29094780146777361_3076622762496320829_n.jpg","images/767161435_29094795830109126_5183584554484902729_n.jpg","images/767190227_29094797590108950_6198950087891670214_n.jpg","images/767268745_29094801020108607_7378657212102029910_n.jpg","images/767268747_29094785770110132_6401055741312077681_n.jpg","images/767268757_29094807260107983_5434414603225958721_n.jpg","images/767540337_29094802293441813_7170638997878097101_n.jpg","images/767560465_29094813166774059_2105229571905756859_n.jpg","images/767585842_29094775573444485_89701162141618051_n.jpg","images/767597371_29094803190108390_8979015083604336949_n.jpg","images/768136639_29094790846776291_7876141439285567982_n.jpg","images/768136652_29094791123442930_8076442244138824158_n.jpg","images/768172792_29094778386777537_8823404192800642967_n.jpg","images/768230278_29094793220109387_936731070855623548_n.jpg","images/768309979_29094810053441037_2765051383609908879_n.jpg","images/768309985_29094806390108070_2529296993969199660_n.jpg","images/768347640_29094799026775473_7001138853270652955_n.jpg","images/768408577_29094781306777245_701707337294329006_n.jpg","images/769168393_29094786790110030_452110492813266561_n.jpg","images/769309216_29094803883441654_3103561463847116755_n.jpg","images/769385814_29094773493444693_5474464063388404179_n.jpg","images/plant.jpg"];
+
+const lb=document.getElementById("lightbox"),lbimg=document.getElementById("lightboxImg");
+let current=0;
+
+document.getElementById("year").textContent=new Date().getFullYear();
+window.addEventListener("scroll",()=>document.getElementById("nav").classList.toggle("scrolled",scrollY>40));
+document.querySelectorAll(".gallery-card").forEach(c=>c.onclick=()=>{current=+c.dataset.index;openLightbox()});
+function openLightbox(){lbimg.src=gallery[current];lb.classList.add("open");document.body.style.overflow="hidden"}
+function closeLightbox(){lb.classList.remove("open");document.body.style.overflow=""}
+function changePhoto(d){current=(current+d+gallery.length)%gallery.length;lbimg.src=gallery[current]}
+document.addEventListener("keydown",e=>{if(!lb.classList.contains("open"))return;if(e.key==="Escape")closeLightbox();if(e.key==="ArrowLeft")changePhoto(-1);if(e.key==="ArrowRight")changePhoto(1)});
+
+/* =========================================================
+   OWNER CONFIGURATION — edit these values before publishing
+   ========================================================= */
+const HOST_EMAIL="REPLACE_WITH_GRANDMA_EMAIL@example.com";
+const NIGHTLY_RATE=250;
+const BLOCKED_RANGES=[
+  // {start:"2026-09-10",end:"2026-09-14"},
+  // {start:"2026-10-24",end:"2026-10-27"}
+];
+/* ========================================================= */
+
+const monthNames=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const state={view:new Date(),checkIn:null,checkOut:null,guests:2};
+state.view.setDate(1);
+
+const pad=n=>String(n).padStart(2,"0");
+const toISO=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const parseISO=s=>{const [y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
+const sameDay=(a,b)=>a&&b&&toISO(a)===toISO(b);
+const between=(d,start,end)=>d>=start&&d<=end;
+
+function dateBlocked(date){
+  return BLOCKED_RANGES.some(r=>{
+    const s=parseISO(r.start),e=parseISO(r.end);
+    return between(date,s,e);
+  });
+}
+function rangeBlocked(start,end){
+  const d=new Date(start);
+  while(d<end){
+    if(dateBlocked(d)) return true;
+    d.setDate(d.getDate()+1);
+  }
+  return false;
+}
+function formatDate(date){
+  return date?date.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"}):"—";
+}
+function nightsBetween(a,b){return a&&b?Math.round((b-a)/86400000):0}
+
+function renderCalendar(){
+  const grid=document.getElementById("calendarGrid");
+  document.getElementById("calendarTitle").textContent=`${monthNames[state.view.getMonth()]} ${state.view.getFullYear()}`;
+  grid.innerHTML="";
+  const year=state.view.getFullYear(),month=state.view.getMonth();
+  const first=new Date(year,month,1);
+  const daysInMonth=new Date(year,month+1,0).getDate();
+  const leading=first.getDay();
+  const today=new Date();today.setHours(0,0,0,0);
+
+  for(let i=0;i<leading;i++){
+    const blank=document.createElement("div");blank.className="day muted";grid.appendChild(blank);
+  }
+  for(let n=1;n<=daysInMonth;n++){
+    const d=new Date(year,month,n);d.setHours(0,0,0,0);
+    const btn=document.createElement("button");
+    btn.type="button";btn.className="day";btn.textContent=n;
+    btn.setAttribute("aria-label",formatDate(d));
+    if(sameDay(d,today))btn.classList.add("today");
+    const unavailable=dateBlocked(d)||d<today;
+    if(unavailable){btn.classList.add("unavailable");btn.disabled=true;btn.setAttribute("aria-disabled","true")}
+    if(sameDay(d,state.checkIn)||sameDay(d,state.checkOut))btn.classList.add("selected");
+    if(state.checkIn&&state.checkOut&&d>state.checkIn&&d<state.checkOut)btn.classList.add("in-range");
+    if(sameDay(d,state.checkIn))btn.classList.add("range-start");
+    if(sameDay(d,state.checkOut))btn.classList.add("range-end");
+    if(!unavailable)btn.addEventListener("click",()=>selectDate(d));
+    grid.appendChild(btn);
+  }
+}
+
+function selectDate(date){
+  if(dateBlocked(date))return;
+  if(!state.checkIn||state.checkOut){
+    state.checkIn=date;state.checkOut=null;
+    document.getElementById("calendarHint").textContent="Now select your check-out date.";
+  }else if(date<=state.checkIn){
+    state.checkIn=date;state.checkOut=null;
+    document.getElementById("calendarHint").textContent="Now select your check-out date.";
+  }else if(rangeBlocked(state.checkIn,date)){
+    state.checkOut=null;
+    document.getElementById("calendarHint").textContent="That range includes an unavailable date. Please choose another check-out date.";
+  }else{
+    state.checkOut=date;
+    document.getElementById("calendarHint").textContent="Dates selected. You can now complete your booking request.";
+  }
+  syncBookingUI();
+}
+
+function syncBookingUI(){
+  document.getElementById("summaryCheckIn").textContent=formatDate(state.checkIn);
+  document.getElementById("summaryCheckOut").textContent=formatDate(state.checkOut);
+  document.getElementById("summaryGuests").textContent=state.guests;
+  document.getElementById("guestOutput").textContent=state.guests;
+  document.getElementById("formGuests").value=state.guests;
+  document.getElementById("formCheckIn").value=state.checkIn?toISO(state.checkIn):"";
+  document.getElementById("formCheckOut").value=state.checkOut?toISO(state.checkOut):"";
+  const nights=nightsBetween(state.checkIn,state.checkOut);
+  document.getElementById("summaryNights").textContent=nights||"—";
+  document.getElementById("summaryRate").textContent=`$${NIGHTLY_RATE.toLocaleString()}`;
+  document.getElementById("summaryTotal").textContent=`$${(nights*NIGHTLY_RATE).toLocaleString()}`;
+  renderCalendar();
+}
+
+document.getElementById("prevMonth").onclick=()=>{
+  state.view.setMonth(state.view.getMonth()-1);renderCalendar();
+};
+document.getElementById("nextMonth").onclick=()=>{
+  state.view.setMonth(state.view.getMonth()+1);renderCalendar();
+};
+document.getElementById("guestMinus").onclick=()=>{
+  state.guests=Math.max(1,state.guests-1);syncBookingUI();
+};
+document.getElementById("guestPlus").onclick=()=>{
+  state.guests=Math.min(6,state.guests+1);syncBookingUI();
+};
+document.getElementById("formGuests").addEventListener("change",e=>{
+  state.guests=Math.max(1,Math.min(6,Number(e.target.value)));syncBookingUI();
+});
+
+function submitBookingRequest(e){
+  e.preventDefault();
+  const error=document.getElementById("bookingError");
+  error.classList.remove("show");
+  if(!state.checkIn||!state.checkOut){
+    error.textContent="Please select both a check-in and check-out date.";
+    error.classList.add("show");return;
+  }
+  if(rangeBlocked(state.checkIn,state.checkOut)){
+    error.textContent="Your selected dates include an unavailable date. Please choose a different range.";
+    error.classList.add("show");return;
+  }
+  const name=document.getElementById("name").value.trim();
+  const email=document.getElementById("email").value.trim();
+  const phone=document.getElementById("phone").value.trim();
+  const message=document.getElementById("message").value.trim();
+  const nights=nightsBetween(state.checkIn,state.checkOut);
+  const total=nights*NIGHTLY_RATE;
+
+  const subject=encodeURIComponent("Keuka Lake Cottage Booking Request");
+  const body=encodeURIComponent(
+`Hello,
+
+I would like to request a stay at Keuka Lake Cottage.
+
+Guest name: ${name}
+Guest email: ${email}
+Phone: ${phone||"Not provided"}
+Guests: ${state.guests}
+Check-in: ${formatDate(state.checkIn)}
+Check-out: ${formatDate(state.checkOut)}
+Nights: ${nights}
+Nightly rate: $${NIGHTLY_RATE}
+Estimated total: $${total}
+
+Message / special requests:
+${message||"None"}
+
+Please note: this is a booking request and is pending host confirmation. No reservation is confirmed until the host approves it.
+
+Thank you.`
+  );
+
+  document.getElementById("confirmDates").textContent=`${formatDate(state.checkIn)} – ${formatDate(state.checkOut)}`;
+  document.getElementById("confirmGuests").textContent=`${state.guests} guest${state.guests===1?"":"s"}`;
+  document.getElementById("bookingFormWrap").style.display="none";
+  document.getElementById("confirmation").classList.add("show");
+
+  if(HOST_EMAIL.includes("REPLACE_WITH_GRANDMA_EMAIL")){
+    alert("The request screen is ready, but the owner email still needs to be configured in the JavaScript.");
+  }else{
+    window.location.href=`mailto:${HOST_EMAIL}?subject=${subject}&body=${body}`;
+  }
+}
+
+function resetBooking(){
+  state.checkIn=null;state.checkOut=null;state.guests=2;
+  document.getElementById("bookingForm").reset();
+  document.getElementById("formGuests").value="2";
+  document.getElementById("bookingFormWrap").style.display="";
+  document.getElementById("confirmation").classList.remove("show");
+  document.getElementById("calendarHint").textContent="Select your check-in date.";
+  syncBookingUI();
+}
+
+/* Night mode */
+const themeToggle=document.getElementById("themeToggle");
+const savedTheme=localStorage.getItem("keuka-theme");
+if(savedTheme==="dark")document.body.classList.add("dark-mode");
+function updateThemeIcon(){
+  const dark=document.body.classList.contains("dark-mode");
+  themeToggle.textContent=dark?"☀":"☾";
+  themeToggle.setAttribute("aria-label",dark?"Switch to day mode":"Switch to night mode");
+}
+themeToggle.onclick=()=>{
+  document.body.classList.toggle("dark-mode");
+  localStorage.setItem("keuka-theme",document.body.classList.contains("dark-mode")?"dark":"light");
+  updateThemeIcon();
+};
+updateThemeIcon();
+
+/* Mobile menu */
+const menuToggle=document.getElementById("menuToggle"),navlinks=document.querySelector(".navlinks");
+menuToggle.onclick=()=>{
+  const open=navlinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded",String(open));
+};
+navlinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>navlinks.classList.remove("open")));
+
+/* Initialize booking calendar */
+renderCalendar();
+syncBookingUI();
+</script></body></html>
